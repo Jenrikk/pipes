@@ -32,7 +32,48 @@
           <td>slice:1:4</td>
           <td>{{ nombre | slice:1:4}}</td>
         </tr>
+        <tr>
+          <td>{{PI}}</td>
+          <td>number:'2.0-0'</td>
+          <td>{{ PI | number:'2.0-0'}}</td>
+        </tr>
+        <tr>
+          <td>{{PI}}</td>
+          <td>number:'.0-3'</td>
+          <td>{{ PI | number:'.0-3'}}</td>
+        </tr>
+        <tr>
+          <td>{{porcentaje}}</td>
+          <td>percent</td>
+          <td>{{ porcentaje | percent}}</td>
+        </tr>
+        <tr>
+          <td>{{porcentaje}}</td>
+          <td>percent:'2.2-2'</td>
+          <td>{{ porcentaje | percent:'2.2-2'}}</td>
+        </tr>
+        <tr>
+          <td>{{salario}}</td>
+          <td>currency:'EUR '</td>
+          <td>{{ salario | currency:'EUR'}}</td>
+        </tr>
       </tbody>
     </table>
+  </div>
+</div>
+
+<h3>Slice <small>slice:1:4</small></h3>
+<hr>
+<ul class="list-group">
+  <li *ngFor="let personaje of personajes | slice:1:4" class="list-group-item">{{personajes}}</li>
+</ul>
+
+<h3>JSON</h3>
+<hr>
+<div class="row mb-5">
+  <div class="col">
+    <pre>
+      {{heroe | json}}
+    </pre>
   </div>
 </div>
